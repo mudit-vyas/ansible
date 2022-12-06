@@ -1,0 +1,7 @@
+- hosts: demo
+  tasks:
+    - name: changing the files through filtering
+      lineinfile:
+        path: /etc/ssh/sshd.config
+        regexp: "^PasswordAuthentication"
+        line: "PasswordAuthentication yes"

@@ -1,0 +1,13 @@
+- hosts : demo
+  vars_prompt : 
+     name : john
+     prompt: "Enter the Package : "
+     private: no
+  tasks :
+    - name : create a user
+      package :
+        name : "{{ john }}"
+        state : present
+    - debug :
+        msg : "{{ john }}"
+         
